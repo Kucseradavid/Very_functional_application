@@ -14,7 +14,11 @@
         </Grid.RowDefinitions>
 
         <Border Background="WhiteSmoke"/>
+        <Border VerticalAlignment="Top" Height="1" Background="LightGray"/>
+        <Border VerticalAlignment="Bottom" Height="1" Background="LightGray"/>
         <Border Grid.Row="2" Background="WhiteSmoke"/>
+        <Border Grid.Row="2" VerticalAlignment="Top" Height="1" Background="LightGray"/>
+        <Border Grid.Row="2" VerticalAlignment="Bottom" Height="1" Background="LightGray"/>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"
                     VerticalAlignment="Center">
@@ -30,6 +34,8 @@
                 <ColumnDefinition Width="30*"/>
                 <ColumnDefinition Width="70*"/>
             </Grid.ColumnDefinitions>
+
+            <Border HorizontalAlignment="Right" Width="1" Background="LightGray"/>
 
             <StackPanel>
                 <ComboBox>
