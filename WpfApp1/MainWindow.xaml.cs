@@ -19,6 +19,24 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+
+            fizess.Items.Add("Kártya");
+            fizess.Items.Add("Készpénz");
+
+            masis.Visibility = Visibility.Hidden;
+        }
+
+        private void van(object sender, RoutedEventArgs e)
+        {
+            if (vanmasis.IsChecked == true)
+            {
+                masis.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                masis.Visibility = Visibility.Hidden;
+                szemszam.Text = "";
+            }
         }
     }
 }

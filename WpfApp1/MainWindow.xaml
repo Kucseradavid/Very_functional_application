@@ -13,9 +13,12 @@
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
 
+        <Border Background="WhiteSmoke"/>
+        <Border Grid.Row="2" Background="WhiteSmoke"/>
+
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"
                     VerticalAlignment="Center">
-            <TextBlock Text="Home" Width="50"/>
+            <TextBlock Text="Home" Width="50" Margin="10 0 0 0"/>
             <TextBlock Text="About" Width="50"/>
             <TextBlock Text="Prices" Width="50"/>
         </StackPanel>
@@ -56,12 +59,42 @@
                 </ComboBox>
             </StackPanel>
 
-            <TextBlock Grid.Column="1" Text="Szöveg vala"
-                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <!--<TextBlock Grid.Column="1" Text="Szöveg vala"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
+
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="Személyes adatok"
+                           HorizontalAlignment="Center" VerticalAlignment="Top"
+                           Margin="0 10 0 0" FontSize="16"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                    <TextBlock Text="Név:" Margin="0 0 5 0"/>
+                    <TextBox MinWidth="150"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                    <TextBlock Text="Kezd. Dátum:" Margin="0 0 5 0"/>
+                    <TextBox MinWidth="100"/>
+                    <TextBlock Text="Vég. Dátum:" Margin="10 0 5 0"/>
+                    <TextBox MinWidth="100"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                    <TextBlock Text="Fizetés típusa:" Margin="0 0 5 0"/>
+                    <ComboBox x:Name="fizess" MinWidth="100"/>
+                </StackPanel>
+                <CheckBox x:Name="vanmasis" Content="Egyéb személyek"
+                          HorizontalAlignment="Center" Margin="5" Click="van"/>
+                <StackPanel x:Name="masis" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                    <TextBlock Text="Személyek száma:" Margin="0 0 5 0"/>
+                    <TextBox x:Name="szemszam" MinWidth="50"/>
+                </StackPanel>
+            </StackPanel>
+            <Button Content="Mentés" Grid.Column="1"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                    Margin="0 0 20 10" Padding="5"/>
+
         </Grid>
 
-        <TextBlock Grid.Row="2" Text="Random Company"/>
+        <TextBlock Grid.Row="2" Text="Random Company" Margin="10 0 0 0"/>
         
-        <TextBlock Grid.Row="2" Text="(C) 2026" HorizontalAlignment="Right"/>
+        <TextBlock Grid.Row="2" Text="(C) 2026" HorizontalAlignment="Right" Margin="0 0 10 0"/>
     </Grid>
 </Window>
