@@ -22,6 +22,7 @@ namespace WpfApp1
 
             fizess.Items.Add("Kártya");
             fizess.Items.Add("Készpénz");
+            fizess.SelectedIndex = 0;
 
             masis.Visibility = Visibility.Hidden;
         }
