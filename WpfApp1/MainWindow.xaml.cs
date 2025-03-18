@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -38,6 +39,24 @@ namespace WpfApp1
                 masis.Visibility = Visibility.Hidden;
                 szemszam.Text = "";
             }
+        }
+
+        private void ment(object sender, RoutedEventArgs e)
+        {
+            int szsz = 0;
+            
+            if (vanmasis.IsChecked == true && szemszam.Text != "")
+            {
+                szsz = Convert.ToInt32(szemszam.Text);
+            }
+
+            string sor = $"{nev.Text};{kezddat.Text};{vegdat.Text};{fizess.SelectedItem};{szsz}";
+            
+            StreamWriter adatok = new StreamWriter("../../../adatok.txt");
+            adatok.WriteLine(sor);
+            adatok.Close();
+
+            MessageBox.Show(sor, "Sikeres mentés!");
         }
     }
 }
