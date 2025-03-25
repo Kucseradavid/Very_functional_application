@@ -27,7 +27,7 @@
             <TextBlock Text="Prices" Width="50"/>
         </StackPanel>
 
-        <Button HorizontalAlignment="Right" Content="Exit" Width="50"/>
+        <Button x:Name="kifele" HorizontalAlignment="Right" Content="Exit" Width="50" Click="bezaraBazar"/>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>

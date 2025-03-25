@@ -58,5 +58,11 @@ namespace WpfApp1
 
             MessageBox.Show(sor, "Sikeres mentés!");
         }
+
+        private void bezaraBazar(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult Result = MessageBox.Show("Biztos ki akarsz lépni?", "Fontos kérdés mielőtt elhagyod az alkalmazást", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            if (Result == MessageBoxResult.OK) Close();
+        }
     }
 }
