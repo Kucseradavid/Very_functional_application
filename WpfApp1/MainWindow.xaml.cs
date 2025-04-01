@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Data;
 
 namespace WpfApp1
 {
@@ -17,6 +18,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Reservation Reservation { get; set; } = new Reservation();
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -26,6 +29,8 @@ namespace WpfApp1
             fizess.SelectedIndex = 0;
 
             masis.Visibility = Visibility.Hidden;
+
+            this.DataContext = Reservation;
         }
 
         private void van(object sender, RoutedEventArgs e)
@@ -41,7 +46,7 @@ namespace WpfApp1
             }
         }
 
-        private void ment(object sender, RoutedEventArgs e)
+        /*private void ment(object sender, RoutedEventArgs e)
         {
             int szsz = 0;
             
@@ -57,7 +62,7 @@ namespace WpfApp1
             adatok.Close();
 
             MessageBox.Show(sor, "Sikeres mentés!");
-        }
+        }*/
 
         private void bezaraBazar(object sender, RoutedEventArgs e)
         {
