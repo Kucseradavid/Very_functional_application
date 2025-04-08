@@ -19,25 +19,13 @@ namespace WpfApp1.Data
         {
             get
             {
-                if (_fizess == "Kártya")
-                {
-                    return 0;
-                }
-                else
-                {
-                    return 1;
-                }
+                if (_fizess == "Kártya") return 0;
+                else return 1;
             }
             set
             {
-                if (value == 0)
-                {
-                    _fizess = "Kártya";
-                }
-                else
-                {
-                    _fizess = "Készpénz";
-                }
+                if (value == 0) _fizess = "Kártya";
+                else _fizess = "Készpénz";
             }
         }
 
@@ -62,13 +50,11 @@ namespace WpfApp1.Data
             }
         }
 
-        public void mentes()
+        public void mentes(string sor)
         {
-            string sor = $"{nev};{kezddat};{vegdat};{_fizess};{_szsz}";
-
-            /*StreamWriter adatok = new StreamWriter("../../../adatok.txt");
+            StreamWriter adatok = new StreamWriter("../../../adatok.txt");
             adatok.WriteLine(sor);
-            adatok.Close();*/
+            adatok.Close();
 
             MessageBox.Show(sor, "Sikeres mentés!");
         }

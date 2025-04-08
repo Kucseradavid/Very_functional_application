@@ -46,23 +46,18 @@ namespace WpfApp1
             }
         }
 
-        /*private void ment(object sender, RoutedEventArgs e)
+        private void ment(object sender, RoutedEventArgs e)
         {
-            int szsz = 0;
-            
-            if (vanmasis.IsChecked == true && szemszam.Text != "")
+            string sor;
+
+            if (vanmasis.IsChecked == true)
             {
-                szsz = Convert.ToInt32(szemszam.Text);
+                sor = $"{Reservation.nev};{Reservation.kezddat};{Reservation.vegdat};{Reservation.fizess};{Reservation.szsz}";
             }
+            else sor = $"{Reservation.nev};{Reservation.kezddat};{Reservation.vegdat};{Reservation.fizess};{0}";
 
-            string sor = $"{nev.Text};{kezddat.Text};{vegdat.Text};{fizess.SelectedItem};{szsz}";
-            
-            StreamWriter adatok = new StreamWriter("../../../adatok.txt");
-            adatok.WriteLine(sor);
-            adatok.Close();
-
-            MessageBox.Show(sor, "Sikeres mentés!");
-        }*/
+            Reservation.mentes(sor);
+        }
 
         private void bezaraBazar(object sender, RoutedEventArgs e)
         {
