@@ -52,7 +52,7 @@ namespace WpfApp1.Data
 
         public void mentes(string sor)
         {
-            StreamWriter adatok = new StreamWriter("../../../adatok.txt");
+            StreamWriter adatok = new StreamWriter("../../../adatok.txt", true);
             adatok.WriteLine(sor);
             adatok.Close();
 
